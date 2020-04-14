@@ -1,0 +1,39 @@
+// Colors
+$emporor: #555555;
+$deep_cerulean: #006DB0;
+$swamp: #000E16;
+$azure_radiance: #009EFF;
+$silver_sand: #BBBDBF;
+$cerulean: #0AB1C7;
+$old-lace: #fbf5e9;
+
+// Bootstrap Colors
+$primary: $deep_cerulean;
+$secondary: $emporor;
+$light: #FFF;
+
+// Links
+$link-color: $azure_radiance;
+$link-hover-color: $cerulean;
+
+// HR
+$hr-border-color: $azure_radiance;
+
+// Border Radius
+$border-radius: 0.125rem; // 2px
+$border-radius-lg: 0.25rem; // 4px
+$border-radius-sm: 0.0625rem; // 1px
+
+// Typography
+$font-family-sans-serif: 'Roboto', Arial, sans-serif;
+$font-family-serif: 'Cormorant Garamond', 'Garamond', serif;
+$headings-font-family: $font-family-serif;
+$headings-font-weight: 600;
+$body-color: $swamp;
+
+// Buttons
+$btn-transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+
+// Navbar
+$nav-link-padding-y: 1.25rem; // 20px
+$navbar-padding-y: 0;

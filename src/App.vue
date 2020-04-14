@@ -1,28 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/style-guide">Style Guide</router-link>
+    </div>
+    <SiteHeader></SiteHeader>
+    <SiteNav></SiteNav>
+    <router-view/>
+    <SiteFooter></SiteFooter>
   </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import SiteHeader from '@/components/SiteHeader.vue'
+import SiteNav from '@/components/SiteNav.vue'
+import SiteFooter from '@/components/SiteFooter.vue'
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    SiteHeader,
+    SiteNav,
+    SiteFooter
   }
 }
 </script>
-
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import './sass/variables';
+@import './sass/mixins';
+@import '~bootstrap/scss/bootstrap';
+@import './sass/global';
+@import './sass/buttons';
+@import './sass/header';
+@import './sass/footer';
+@import './sass/color-swatches';
+@import './sass/sections';
+@import './sass/pages/style-guide';
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>

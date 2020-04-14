@@ -1,0 +1,31 @@
+header.header {
+  background-color: $emporor;
+  color: #FFFFFF;
+  padding: 30px;
+  .logo {
+    display: block;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+}
+nav.navbar {
+  background-color: $silver-sand;
+  @include media-breakpoint-up(md) { 
+    font-size: 1.25rem; // 20px
+  }
+  .nav {
+    width: 100%;
+    justify-content: center;
+    .nav-item {
+      flex: 1;
+      > a, > a:focus {
+        color: #FFF;
+        text-align: center;
+        transition: background-color 0.5s ease;
+        &:hover {
+          background-color: $deep_cerulean;
+        }
+      }
+    }
+  }
+}

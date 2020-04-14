@@ -1,0 +1,53 @@
+// Global
+body {
+  background: $old-lace url('/img/old-lace-bg.jpg');
+}
+#app {
+  max-width: 1360px;
+  margin-right: auto;
+  margin-left: auto;
+  background: #FFF;
+  @include boxshadow(5);
+}
+.page-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.content {
+  padding: 2rem; // 32px
+}
+// Typography
+h1, .h1 {
+  color: $deep_cerulean;
+}
+h2, .h2 {
+  color: $cerulean;
+}
+h3, .h3 {
+  font-family: $font-family-sans-serif;
+  font-weight: 500;
+}
+.lead {
+  @include media-breakpoint-up(md) { 
+    font-size: 1.5rem; // 24px
+  }
+}
+// Links
+a.hover {
+  color: $link-hover-color;
+  text-decoration: underline;
+}
+// Cards
+.card {
+  background-color: #FFF;
+  border: 1px solid $emporor;
+  margin-bottom: 30px;
+  @include boxshadow(1);
+  .card-header {
+    background-color: $cerulean;
+    border-color: $emporor;
+    color: #FFF;
+    font-size: 1.5rem; // 24px
+    font-weight: 400;
+  }
+}

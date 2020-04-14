@@ -1,0 +1,18 @@
+// Buttons
+.btn-primary {
+  border-color: $swamp;
+  &:hover {
+    background-color: lighten($deep_cerulean,10%);
+  }
+}
+.btn-secondary {
+  border-color: $swamp;
+  &:hover {
+    background-color: lighten($emporor,10%);
+  }
+}
+.btn-outline-light {
+  &:hover, &:focus {
+    color: $deep_cerulean;
+  }
+}
