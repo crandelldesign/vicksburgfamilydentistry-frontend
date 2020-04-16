@@ -14,11 +14,17 @@
 import SiteHeader from '@/components/SiteHeader.vue'
 import SiteNav from '@/components/SiteNav.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
+import AOS from 'aos'
 export default {
   components: {
     SiteHeader,
     SiteNav,
     SiteFooter
+  },
+  created () {
+    AOS.init({
+      once: true
+    });
   }
 }
 </script>
@@ -26,6 +32,7 @@ export default {
 @import './sass/variables';
 @import './sass/mixins';
 @import '~bootstrap/scss/bootstrap';
+@import '~aos/src/sass/aos';
 @import './sass/global';
 @import './sass/buttons';
 @import './sass/header';

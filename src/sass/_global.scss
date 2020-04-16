@@ -27,6 +27,10 @@ h3, .h3 {
   font-family: $font-family-sans-serif;
   font-weight: 500;
 }
+h4, .h4 {
+  font-family: $font-family-sans-serif;
+  font-weight: 500;
+}
 .lead {
   @include media-breakpoint-up(md) { 
     font-size: 1.5rem; // 24px
@@ -41,7 +45,6 @@ a.hover {
 .card {
   background-color: #FFF;
   border: 1px solid $emporor;
-  margin-bottom: 30px;
   @include boxshadow(1);
   .card-header {
     background-color: $cerulean;
@@ -51,3 +54,5 @@ a.hover {
     font-weight: 400;
   }
 }
+// Contact
+.grecaptcha-badge { visibility: hidden; }

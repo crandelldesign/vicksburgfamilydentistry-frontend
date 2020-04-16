@@ -6,7 +6,7 @@
     <div class="google-map" id="map"></div>
     <div class="content">
         <div class="row" itemscope itemtype="http://schema.org/Dentist">
-            <div class="col-xl-6 col-lg-8 offset-lg-2 offset-xl-0" id="contact-form">
+            <div class="col-xl-6 col-lg-8 offset-lg-2 offset-xl-0 mb-4" id="contact-form">
                 <div class="card" data-aos="zoom-in">
                     <h3 class="card-header">Send Us a Message</h3>
                     <div class="card-body">
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-xl-3">
+            <div class="col-md-6 col-xl-3 mb-4">
                 <div class="card" data-aos="zoom-in">
                     <h3 class="card-header">Contact Information</h3>
                     <div class="card-body">
@@ -82,7 +82,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-xl-3">
+            <div class="col-md-6 col-xl-3 mb-4">
                 <div class="card" data-aos="zoom-in">
                     <h3 class="card-header">Hours</h3>
                     <div class="card-body">
@@ -311,7 +311,7 @@ export default {
         this.loading = true;
         this.submitText = 'Sending...';
         console.log(token);
-        axios.post('/contact', {
+        axios.post('/api/contact', {
           'contactname': this.contactname,
           'email': this.email,
           'phone': this.phone,
