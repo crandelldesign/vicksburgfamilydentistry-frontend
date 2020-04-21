@@ -307,7 +307,6 @@ export default {
       const isValid = await this.$refs.contactUsForm.validate();
       //console.log(isValid);
       if (isValid) {
-        //this.contact.recaptcha_token = token;
         this.loading = true;
         this.submitText = 'Sending...';
         console.log(token);
@@ -315,7 +314,8 @@ export default {
           'contactname': this.contactname,
           'email': this.email,
           'phone': this.phone,
-          'message': this.message
+          'message': this.message,
+          'token': token
         }).then( (response) => {
           console.log(response);
           // Validation Success
