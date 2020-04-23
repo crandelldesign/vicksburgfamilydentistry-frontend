@@ -6,9 +6,10 @@
     "serve": "vue-cli-service serve --mode development",
     "build:dev": "vue-cli-service build --mode production",
     "build:prod": "vue-cli-service build --mode production",
+    "build:watch": "vue-cli-service build --mode production --watch",
     "lint": "vue-cli-service lint",
     "deploy-dev": "npm run build:dev && scp -r dist/* hosting@67.227.214.76:sites/vicksburgfamilydentistry/dev-frontend",
-    "deploy-prod": "npm run build:prod && scp -r dist hosting@67.227.214.76:sites/vicksburgfamilydentistry/prod-frontend"
+    "deploy-prod": "npm run build:prod && scp -r dist/* hosting@67.227.214.76:sites/vicksburgfamilydentistry/prod-frontend"
   },
   "dependencies": {
     "aos": "^2.3.4",
@@ -31,7 +32,6 @@
     "prerender-spa-plugin": "^3.2.1",
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
-    "vue-cli-plugin-prerender-spa": "~1.1.6",
     "vue-template-compiler": "^2.6.11"
   }
 }

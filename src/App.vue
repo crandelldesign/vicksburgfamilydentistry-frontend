@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="vicksburg-family-dentistry">
     <!--<div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/style-guide">Style Guide</router-link>
@@ -14,7 +14,7 @@
 import SiteHeader from '@/components/SiteHeader.vue'
 import SiteNav from '@/components/SiteNav.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
-import AOS from 'aos'
+//import AOS from 'aos'
 export default {
   components: {
     SiteHeader,
@@ -22,9 +22,9 @@ export default {
     SiteFooter
   },
   created () {
-    AOS.init({
+    /*AOS.init({
       once: true
-    });
+    });*/
   }
 }
 </script>
@@ -32,7 +32,7 @@ export default {
 @import './sass/variables';
 @import './sass/mixins';
 @import '~bootstrap/scss/bootstrap';
-@import '~aos/src/sass/aos';
+//@import '~aos/src/sass/aos';
 @import './sass/global';
 @import './sass/buttons';
 @import './sass/header';

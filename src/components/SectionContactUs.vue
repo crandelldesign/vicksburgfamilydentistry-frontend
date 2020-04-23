@@ -13,9 +13,10 @@
                       <div class="alert" role="alert" v-if="alert.show" :class="'alert-'+alert.status">
                         {{alert.message}}
                       </div>
+
                       <!--<ValidationObserver ref="contactUsForm" v-slot="{ reset }" tag="div">-->
                       <ValidationObserver ref="contactUsForm" tag="div">
-                        <form id="contact-us-form" @submit.prevent="submitForm($event)">
+                        <form id="contact-us-form" method="post" v-on:submit.prevent="submitForm($event)">
                           <ValidationProvider class="form-group" rules="required" name="name" v-slot="{ valid, errors }" tag="div">
                             <label class="sr-only" for="contactname">Name</label>
                             <input type="text" class="form-control" id="contactname" name="contactname" v-model="contactname" v-bind:class="{ 'is-invalid': errors[0] }" placeholder="Enter Your Name">
@@ -295,9 +296,8 @@ export default {
       console.log('fail');
     },
     // Contact Us Form
-    submitForm(event) {
+    submitForm() {
       this.error_message = '';
-      this.contactForm = event;
       this.isSubmitting = true;
       this.$refs.recaptcha.execute();
     },
