@@ -14,7 +14,7 @@
 import SiteHeader from '@/components/SiteHeader.vue'
 import SiteNav from '@/components/SiteNav.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
-//import AOS from 'aos'
+import AOS from 'aos'
 export default {
   components: {
     SiteHeader,
@@ -22,9 +22,31 @@ export default {
     SiteFooter
   },
   created () {
-    /*AOS.init({
+    AOS.init({
       once: true
-    });*/
+    });
+  },
+  watch: {
+    '$route' (to) {
+      document.title = to.meta.title || 'Your Website'
+      if (to.meta.metaTags) {
+        let metaTags = to.meta.metaTags;
+        metaTags.forEach( metaTag => {
+          if (document.querySelector('meta[name="' + metaTag.name + '"]')) {
+            const tag = document.querySelector('meta[name="' + metaTag.name + '"]');
+            Object.keys(metaTag).forEach(key => {
+              tag.setAttribute(key, metaTag[key]);
+            });
+          } else {
+            const tag = document.createElement('meta');
+            Object.keys(metaTag).forEach(key => {
+              tag.setAttribute(key, metaTag[key]);
+            });
+            document.head.appendChild(tag);
+          }
+        });
+      }
+    }
   }
 }
 </script>
@@ -32,7 +54,7 @@ export default {
 @import './sass/variables';
 @import './sass/mixins';
 @import '~bootstrap/scss/bootstrap';
-//@import '~aos/src/sass/aos';
+@import '~aos/src/sass/aos';
 @import './sass/global';
 @import './sass/buttons';
 @import './sass/header';

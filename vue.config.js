@@ -1,6 +1,5 @@
 const path = require('path');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
-
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
 
 module.exports = {
@@ -23,24 +22,14 @@ module.exports = {
       }),
     ],
   },
-  /*pluginOptions: {
-    prerenderSpa: {
-      registry: undefined,
-      renderRoutes: [
-        '/'
-      ],
-      useRenderEvent: true,
-      headless: true,
-      onlyProduction: true,
-      postProcess: route => {
-        // Defer scripts and tell Vue it's been server rendered to trigger hydration
-        route.html = route.html
-          .replace(/<script (.*?)>/g, '<script $1 defer>')
-          .replace('id="app"', 'id="app" data-server-rendered="true"');
-        return route;
-      }
-    }
-  },*/
+  chainWebpack: config => {
+    config
+    .plugin('html')
+    .tap(args => {
+      args[0].title = 'Vicksburg Family Dentistry'
+      return args
+    })
+  },
   css: {
     extract: true,
     loaderOptions: {
