@@ -1,4 +1,7 @@
 // Global
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: $old-lace url('/img/old-lace-bg.jpg');
 }
