@@ -292,7 +292,7 @@ export default {
         });
     },
     googleMapsFailedToLoad() {
-      console.log('fail');
+      //console.log('fail');
     },
     // Contact Us Form
     submitForm() {
@@ -314,7 +314,7 @@ export default {
           'phone': this.phone,
           'message': this.message,
           'token': token
-        }).then( (response) => {
+        }).then( () => {
           //console.log(response);
           // Validation Success
           this.isLoading = false;
@@ -323,13 +323,13 @@ export default {
           this.alert.message = `Thanks for your e-mail! We'll get back to you as soon as we can.`;
           this.submitText = 'Send Message';
           this.reset();
-        }).catch( e => {
+        }).catch( () => {
           this.isLoading = false;
           this.alert.show = true;
           this.alert.status = 'danger';
           this.alert.message = 'Your message was not received. Please try again.';
           this.submitText = 'Send Message';
-          console.log(e);
+          //console.log(e);
         });
       } else {
         // Validation Failed
