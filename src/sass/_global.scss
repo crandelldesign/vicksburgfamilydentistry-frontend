@@ -59,3 +59,12 @@ a.hover {
 }
 // Contact
 .grecaptcha-badge { visibility: hidden; }
+// AOS IE11 Fixes
+@media all and (-ms-high-contrast:none) {
+  *::-ms-backdrop, [data-aos^=fade][data-aos^=fade],[data-aos^=zoom][data-aos^=zoom] {
+    opacity: 1;
+  }
+  *::-ms-backdrop, [data-aos^=zoom][data-aos^=zoom] {
+    transform: scale(1);
+  }
+}
