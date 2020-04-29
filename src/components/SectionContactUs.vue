@@ -172,7 +172,6 @@ export default {
   methods: {
     // Map
     initMap() {
-      console.log(google);
         var location = {lat: 42.121768, lng: -85.542446};
         this.map = new google.maps.Map(document.getElementById('map'), {
             zoom: 15,
@@ -309,7 +308,6 @@ export default {
       if (isValid) {
         this.loading = true;
         this.submitText = 'Sending...';
-        console.log(token);
         axios.post('/api/contact', {
           'contactname': this.contactname,
           'email': this.email,
@@ -317,7 +315,7 @@ export default {
           'message': this.message,
           'token': token
         }).then( (response) => {
-          console.log(response);
+          //console.log(response);
           // Validation Success
           this.isLoading = false;
           this.alert.show = true;
