@@ -8,8 +8,8 @@
           <p>He is a member of the American Dental Association, Michigan Dental Association, and Kalamazoo Valley District Dental Society.  He participates in many continuing education courses throughout the year.</p>
 
           <h3>Office Staff</h3>
-          <p>The Office is managed by Kris McGlothlen who brings in 21 years of dental experience. The front desk is ran by Jess. She is joined by Cheryl, who will greet you with a smile and are very willing to help you with your insurance and billing questions.</p>
-          <p>Paula and Holly are Dr Ford's assistant. They are very good at making you feel comfortable during procedures and always has a warm friendly smile.</p>
+          <p>The Office is managed by Kris McGlothlen who brings in 21 years of dental experience. The front desk is run by Jessica and Cheryl, who will greet with a smile and are very willing to help you with your insurance and billing questions.</p>
+          <p>Paula and Holly are Dr Ford's assistants. They are very good at making you feel comfortable during procedures and always have a warm friendly smile.</p>
           <p>Heidi, Colleen, Dana, Jen, Kelly and Jamie are our hygienists.  They all do an excellent job cleaning your teeth while keeping you comfortable. They have a wealth of knowledge concerning your oral hygiene needs.  Be sure to ask them anything that may be on your mind concerning your oral hygiene.</p>
       </div>
   </section>
