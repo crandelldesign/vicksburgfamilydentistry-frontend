@@ -8,6 +8,23 @@
     <SiteNav></SiteNav>
     <router-view/>
     <SiteFooter></SiteFooter>
+
+    <b-modal ref="covid-modal" id="covid-modal" hide-footer>
+      <template v-slot:modal-title>
+        COVID-19 Update
+      </template>
+      <p>Practice procedures and precautions to keep our patients and our staff safe. Below is a list of questions you should read and answer prior to your appointment:</p>
+      <ol>
+        <li>Do you have a fever, or have you felt hot or feverish recently (14-21 days)?</li>
+        <li>Are you having shortness of breath or other difficulties breathing?</li>
+        <li>Do you have a cough?</li>
+        <li>Are you experiencing any other flu-like symptoms, such as gastrointestinal upset, headache, or fatigue?</li>
+        <li>Have you experienced recent loss of taste or smell?</li>
+        <li>Are you in contact with any confirmed COVID-19 positive patients? Patients who are well but who have a sick family member at home with COVID-19 should consider postponing elective treatment.</li>
+      </ol>
+      <p><small>*Positive responses to any of these would likely indicate a deeper discussion with the dentist before proceeding with dental treatment.</small></p>
+    </b-modal>
+
   </div>
 </template>
 <script>
@@ -25,10 +42,16 @@ export default {
     AOS.init({
       once: true
     });
+    
+  },
+  mounted () {
+    console.log('hi');
+    //this.$bvModal.show('covid-modal');
+    this.$refs['covid-modal'].show();
   },
   watch: {
     '$route' (to) {
-      document.title = to.meta.title || 'Your Website'
+      document.title = to.meta.title || 'Vicksburg Family Dentistry'
       if (to.meta.metaTags) {
         let metaTags = to.meta.metaTags;
         metaTags.forEach( metaTag => {
