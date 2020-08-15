@@ -9,7 +9,7 @@
     <router-view/>
     <SiteFooter></SiteFooter>
 
-    <b-modal ref="covid-modal" id="covid-modal" hide-footer>
+    <!--<b-modal ref="covid-modal" id="covid-modal-old" hide-footer>
       <template v-slot:modal-title>
         COVID-19 Update
       </template>
@@ -23,7 +23,9 @@
         <li>Are you in contact with any confirmed COVID-19 positive patients? Patients who are well but who have a sick family member at home with COVID-19 should consider postponing elective treatment.</li>
       </ol>
       <p><small>*Positive responses to any of these would likely indicate a deeper discussion with the dentist before proceeding with dental treatment.</small></p>
-    </b-modal>
+    </b-modal>-->
+
+    
 
   </div>
 </template>
@@ -38,6 +40,11 @@ export default {
     SiteNav,
     SiteFooter
   },
+  data () {
+    return {
+      isModalReady: false,
+    }
+  },
   created () {
     AOS.init({
       once: true
@@ -45,9 +52,14 @@ export default {
     
   },
   mounted () {
-    console.log('hi');
+    //console.log('hi');
     //this.$bvModal.show('covid-modal');
-    this.$refs['covid-modal'].show();
+    document.addEventListener('DOMContentLoaded', () => {
+      this.isModalReady = true;
+      //this.$refs['covid-modal'].show();
+      //this.$bvModal.show('covide-modal-old');
+      //console.log(this.$bvModal);
+    });
   },
   watch: {
     '$route' (to) {
