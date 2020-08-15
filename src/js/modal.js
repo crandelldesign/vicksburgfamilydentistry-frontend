@@ -19,9 +19,15 @@
             self.hide();
           });
         }
+        this.el.addEventListener('click', (e) => {
+          if ( this.el.classList.contains('show') && e.target === this.el) {
+            self.hide();
+            e.preventDefault();
+          }
+        },false);
       }
       catch(e){
-          console.log(e);
+        console.log(e);
       }
   };
 
@@ -34,10 +40,10 @@
       if (self.options.backdrop) {
           var backdrop = document.getElementById('bs.backdrop');
           if (backdrop === null) {
-              backdrop = document.createElement('div');
-              backdrop.id = "bs.backdrop";
-              backdrop.className = "modal-backdrop fade show";
-              document.body.appendChild(backdrop);
+            backdrop = document.createElement('div');
+            backdrop.id = "bs.backdrop";
+            backdrop.className = "modal-backdrop fade show";
+            document.body.appendChild(backdrop);
           }
       }
 
@@ -73,7 +79,7 @@
         backdrop: true
       });
       console.log(covidModal);
-      //covidModal.show();
+      covidModal.show();
     }
   });
 })();

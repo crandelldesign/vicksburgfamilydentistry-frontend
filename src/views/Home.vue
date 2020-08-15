@@ -11,17 +11,22 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="covid-modalLabel">Modal title</h5>
+            <h5 class="modal-title" id="covid-modalLabel">COVID-19 Update</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <p>Practice procedures and precautions to keep our patients and our staff safe. Below is a list of questions you should read and answer prior to your appointment:</p>
+            <ol>
+              <li>Do you have a fever, or have you felt hot or feverish recently (14-21 days)?</li>
+              <li>Are you having shortness of breath or other difficulties breathing?</li>
+              <li>Do you have a cough?</li>
+              <li>Are you experiencing any other flu-like symptoms, such as gastrointestinal upset, headache, or fatigue?</li>
+              <li>Have you experienced recent loss of taste or smell?</li>
+              <li>Are you in contact with any confirmed COVID-19 positive patients? Patients who are well but who have a sick family member at home with COVID-19 should consider postponing elective treatment.</li>
+            </ol>
+            <p><small>*Positive responses to any of these would likely indicate a deeper discussion with the dentist before proceeding with dental treatment.</small></p>
           </div>
         </div>
       </div>
