@@ -1,5 +1,3 @@
-/* global Modal */
-
 import Vue from 'vue'
 
 import App from './App.vue'
@@ -9,7 +7,7 @@ import router from './router'
 import { ModalPlugin } from 'bootstrap-vue';
 Vue.use(ModalPlugin)
 
-//require('./js/modal');
+require('./js/modal');
 
 Vue.config.productionTip = false
 
