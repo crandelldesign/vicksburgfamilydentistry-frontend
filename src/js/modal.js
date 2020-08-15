@@ -78,7 +78,7 @@
       let covidModal = new Modal('#covid-modal', {
         backdrop: true
       });
-      console.log(covidModal);
+      //console.log(covidModal);
       covidModal.show();
     }
   });
