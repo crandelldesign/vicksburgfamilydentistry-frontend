@@ -69,10 +69,11 @@
   document.addEventListener('DOMContentLoaded', function() {
     let covidModalId = document.getElementById('covid-modal');
     if (covidModalId) {
-      /*let covidModal = new Modal('#covid-modal', {
+      let covidModal = new Modal('#covid-modal', {
         backdrop: true
       });
-      covidModal.show();*/
+      console.log(covidModal);
+      //covidModal.show();
     }
   });
 })();
