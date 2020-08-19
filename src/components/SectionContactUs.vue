@@ -167,7 +167,12 @@ export default {
     }
   },
   mounted () {
-    this.initMap();
+    document.onreadystatechange = () => {
+      if (document.readyState == "complete") {
+        console.log('complete')
+        this.initMap();
+      }
+    }
   },
   methods: {
     // Map

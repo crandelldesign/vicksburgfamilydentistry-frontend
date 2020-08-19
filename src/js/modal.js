@@ -69,16 +69,13 @@
       }
   };
 
-
-  console.log('hi');
-  /* USAGE: */
+  // USAGE:
   document.addEventListener('DOMContentLoaded', function() {
     let covidModalId = document.getElementById('covid-modal');
     if (covidModalId) {
       let covidModal = new Modal('#covid-modal', {
         backdrop: true
       });
-      //console.log(covidModal);
       covidModal.show();
     }
   });
