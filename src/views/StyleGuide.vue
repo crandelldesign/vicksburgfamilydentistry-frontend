@@ -78,7 +78,7 @@
           </div>
           <div class="col-md-4">
             <div class="color-swatch swatch8">
-              Dark<br />
+              Swamp / Dark<br />
               #000E16
             </div>
           </div>
