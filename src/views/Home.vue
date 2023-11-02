@@ -7,7 +7,7 @@
     <hr />
     <SectionForms></SectionForms>
 
-    <div
+    <!-- <div
       class="modal fade"
       id="covid-modal"
       tabindex="-1"
@@ -71,7 +71,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

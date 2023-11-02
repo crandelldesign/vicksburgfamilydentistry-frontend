@@ -27,8 +27,8 @@
 
       <h3>Office Staff</h3>
       <p>
-        The Office is managed by Kris McGlothlen who brings in 23 years of
-        dental experience. The front desk is run by Jessica and Cheryl, who will
+        The Office is managed by Kris McGlothlen who brings in 24 years of
+        dental experience. The front desk is run by Cindi and Tammy, who will
         greet with a smile and are very willing to help you with your insurance
         and billing questions.
       </p>
