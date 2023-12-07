@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --mode development",
-    "build:dev": "vue-cli-service build --mode production",
+    "serve": "vue-cli-service serve --mode development --openssl-legacy-provider",
+    "build:dev": "vue-cli-service build --mode production --openssl-legacy-provider",
     "build:prod": "vue-cli-service build --mode production",
     "build:watch": "vue-cli-service build --mode production --watch",
     "lint": "vue-cli-service lint",

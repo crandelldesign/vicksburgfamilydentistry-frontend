@@ -20,12 +20,22 @@ jobs:
     - name: Run build task
       run: npm run build:dev
     - name: Deploy to Server
-      uses: easingthemes/ssh-deploy@v2.1.5
-      env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_AL }}
-          ARGS: "-rltgoDzvO --delete"
-          SOURCE: "dist/"
-          REMOTE_HOST: 45.4.172.174
-          REMOTE_USER: ${{ secrets.SSH_USERNAME }}
-          REMOTE_PORT: 7822
-          TARGET: /var/www/vicksburgfamilydentistry/frontend-dev
+      uses: appleboy/scp-action@v0.1.4
+      with:
+        host: 45.4.172.174
+        username: ${{ secrets.SSH_USERNAME }}
+        password: ${{ secrets.SSH_PASSWORD }}
+        port: 7822
+        source: "dist/"
+        target: /var/www/vicksburgfamilydentistry/frontend-dev
+        strip_components: 1
+    #- name: Deploy to Server
+    #  uses: easingthemes/ssh-deploy@v2.1.5
+    #  env:
+    #      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_AL }}
+    #      ARGS: "-rltgoDzvO --delete"
+    #      SOURCE: "dist/"
+    #      REMOTE_HOST: 45.4.172.174
+    #      REMOTE_USER: ${{ secrets.SSH_USERNAME }}
+    #      REMOTE_PORT: 7822
+    #      TARGET: /var/www/vicksburgfamilydentistry/frontend-dev
