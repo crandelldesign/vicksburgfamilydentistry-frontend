@@ -22,10 +22,10 @@ jobs:
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@v2.1.5
       env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_AL }}
           ARGS: "-rltgoDzvO --delete"
           SOURCE: "dist/"
-          REMOTE_HOST: 64.4.160.12
+          REMOTE_HOST: 45.4.172.174
           REMOTE_USER: ${{ secrets.SSH_USERNAME }}
           REMOTE_PORT: 7822
           TARGET: /var/www/vicksburgfamilydentistry/frontend-dev
