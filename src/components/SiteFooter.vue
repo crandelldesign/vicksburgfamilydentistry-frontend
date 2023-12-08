@@ -13,10 +13,7 @@
       owners.
     </p>
     <p>
-      Website created by Matt Crandell of
-      <a href="https://www.crandelldesign.com" target="_blank"
-        >Crandell Design</a
-      >.
+      Website created by <a href="https://www.mattcrandell.com" target="_blank">Matt Crandell</a>.
     </p>
   </footer>
 </template>
