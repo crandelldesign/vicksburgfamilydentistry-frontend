@@ -25,17 +25,33 @@
         participates in many continuing education courses throughout the year.
       </p>
 
+      <hr />
+
+      <div class="photo-section">
+        <h3>Dear Valued Patients,</h3>
+        <img src="/img/dr-young.jpg" alt="Dr. Young" />
+        <p>We are excited to share some wonderful news with you! As part of our commitment to providing the best quality of care, we are expanding our team. Please join us in welcoming Dr. Young, our new associate dentist, who will be joining our practice.</p>
+        
+        <p>Dr. Young comes to us with a wealth of experience and a passion for dentistry. You can expect the same high standards of care that you have always received, now with the added benefit of Dr. Young's expertise. Together, Dr. Ford and Dr. Young will ensure that you and your family continue to receive exceptional dental care.</p>
+        
+        <p>We want to reassure you that Dr. Ford will still be here to serve you. There are no changes to your current treatment plans or appointments. Our goal is to provide you with even more availability for your dental needs, as we continue to grow.</p>
+        
+        <p>Thank you for being a part of our dental family. We look forward to continuing to serve you with the same dedication you have come to expect from us.</p>
+        
+        <p>Warm regards,<br /><strong>Vicksburg Family Dentistry</strong></p>
+      </div>
+
       <h3>Office Staff</h3>
       <p>
-        The Office is managed by Kris McGlothlen who brings in 24 years of
-        dental experience. The front desk is run by Cindi and Tammy, who will
+        The Office is managed by Kris McGlothlen who brings in 25 years of
+        dental experience. The front desk is run by Cindi, who will
         greet with a smile and are very willing to help you with your insurance
         and billing questions.
       </p>
       <p>
         Paula and Gaye are Dr Ford's assistants. They are very good at making
         you feel comfortable during procedures and always have a warm friendly
-        smile.
+        smile. Dr Young's assistant is NIkki Wagner who comes with 30 years of experience.
       </p>
       <p>
         Heidi, Dana, Jamie, Kelly, Tara and Alex are our hygienists. They all do
@@ -47,3 +63,28 @@
     </div>
   </section>
 </template>
+
+<style lang="scss" scoped>
+@import "../sass/mixins";
+
+.photo-section {
+  img {
+    @include boxshadow(3);
+    border: 5px solid #FFF;
+    max-width: 100%;
+    margin-bottom: 15px;
+
+    @media (min-width: 768px) {
+      float: left;
+      margin-right: 20px;
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 768px) {
+    overflow: auto; // Clears the float
+  }
+}
+</style>

@@ -18,6 +18,18 @@ module.exports = {
         renderer: new Renderer({
           headless: true,
           renderAfterDocumentEvent: 'render-event',
+          args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-accelerated-2d-canvas',
+            '--no-first-run',
+            '--no-zygote',
+            '--disable-gpu',
+            '--single-process'
+          ],
+          // Increase timeout
+          timeout: 60000,
         }),
       }),
     ],
